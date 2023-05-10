@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lottie</string>
+    <string name="tbTitle">List Of Users</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="age">Age</string>
+    <string name="buttonAddUser">ADD NEW USER</string>
+    <string name="addUser">Add User</string>
+</resources>
