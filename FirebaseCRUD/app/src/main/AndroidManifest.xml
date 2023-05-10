@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.uc.firebasecrud">
+
+    <dist:module dist:instant="true" />
+
+    <permission
+        android:name="com.uc.firebasecrud.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Firebase"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashLogoutActivity"></activity>
+        <activity android:name=".adapter.ScheduleAdapter" />
+        <activity android:name=".StudentArea" />
+        <activity android:name=".StudentData" />
+        <activity android:name=".LecturerDetail" />
+        <activity android:name=".LecturerData" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AddCourse" />
+        <activity android:name=".CourseData" />
+        <activity android:name=".AddLecturer" />
+        <activity android:name=".Login" />
+        <activity android:name=".AddStudent" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
