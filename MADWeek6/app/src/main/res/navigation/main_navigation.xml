@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.uc.madweek6.ui.main.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="movie"
+            app:argType="com.uc.madweek6.model.Movie"
+            app:nullable="true"  />
+        <argument
+            android:name="tvShow"
+            app:argType="com.uc.madweek6.model.TvShow"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.uc.madweek6.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/actionSplashToMovie"
+            app:destination="@id/nav_movie"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_movie"
+        android:name="com.uc.madweek6.ui.main.movie.MovieFragment"
+        android:label="@string/movies"
+        tools:layout="@layout/fragment_movie" >
+        <action
+            android:id="@+id/actionMovieToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_tv"
+        android:name="com.uc.madweek6.ui.main.tvShow.TvShowFragment"
+        android:label="@string/tvshows"
+        tools:layout="@layout/fragment_tv_show" >
+        <action
+            android:id="@+id/actionTvToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+</navigation>
